@@ -67,5 +67,8 @@ master_df_mean_std$subjectId <- as.factor(master_df_mean_std$subjectId)
 #Create a second, independent tidy data set with the average of each variable for each activity and each subject.
 groupByactivityAndSubject <- ddply(master_df_mean_std,.(activity,subjectId),colwise(mean))
 
+#converting names to lowercase and removing dots
+names(groupByactivityAndSubject)<- gsub("\\.","",tolower(names(groupByactivityAndSubject)))
+
 #output the tidy data to a file
-write.table(groupByactivityAndSubject,row.names=FALSE,file="groupByactivityAndSubject2.txt")
+write.table(groupByactivityAndSubject,row.names=FALSE,file="groupByactivityAndSubject.txt")

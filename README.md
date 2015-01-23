@@ -18,4 +18,5 @@ run_analysis.R
 5. Create data frame *master_df_mean_std* that extracts only the measurements on the mean and standard deviation for each measurement
 6. Converts subject and activity into factors. Labels activity with description using *activity_labels* 
 7. Creates a second, independent tidy data set with the average of each variable for each activity and each subject named *groupByactivityAndSubject*
-8. Writes the data set created in step 7 to a file named *groupByactivityAndSubject.txt*
+8. Cleans the names of data set, by converting all to lowercase and removing dots
+9. Writes the data set created in step 7 to a file named *groupByactivityAndSubject.txt*
